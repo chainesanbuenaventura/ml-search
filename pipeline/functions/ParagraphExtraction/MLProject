@@ -1,0 +1,12 @@
+# paragraphExtraction
+
+name: paragraphExtraction
+
+conda_env: "../../condaEnvs/paragraphExtraction.yml"
+
+entry_points:
+  main:
+    parameters:
+      environment: {type: string, default: "development" }
+    command: "python main.py
+                --environment {environment}"

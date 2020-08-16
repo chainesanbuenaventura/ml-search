@@ -1,0 +1,25 @@
+# lessonsClustering
+
+name: lessonsClustering
+
+conda_env: "../../condaEnvs/clustering.yml"
+
+entry_points:
+  main:
+    parameters:
+      mode: {type: string, default: "train"}
+      environment: {type: string, default: "development" }
+      run_id_model: {type: string, default: ""}
+      update_related_lessons: {type: string, default: "False"}
+      number_of_topics: {type: float, default: 0 }
+      alpha: {type: float, default: 0 }
+      beta: {type: float, default: 0 }
+      max_number_of_topics: {type: int, default: 0 }
+    command: "python main.py
+                --mode {mode}
+                --environment {environment}
+                --run_id_model {run_id_model}
+                --number_of_topics {number_of_topics}
+                --alpha {alpha}
+                --beta {beta}
+                --max_number_of_topics {max_number_of_topics}"

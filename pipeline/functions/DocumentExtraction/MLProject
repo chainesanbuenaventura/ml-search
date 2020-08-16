@@ -1,0 +1,12 @@
+# documentExtraction
+
+name: documentExtraction
+
+conda_env: "../../condaEnvs/documentExtraction.yml"
+
+entry_points:
+  main:
+    parameters:
+      environment: {type: string, default: "development" }
+    command: "python main.py
+                --environment {environment}"

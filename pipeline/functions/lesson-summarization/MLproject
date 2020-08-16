@@ -1,0 +1,26 @@
+name: lesson-summarization
+
+conda_env: eva_presumm.yml
+#docker_env:
+#  image: presumm-eva:0.1
+#  volumes: ["/data/home/admin01/notebooks/ADB-CognitiveSearch-#ML/pipeline/functions/DataFunctions/ElasticFunctions.py:/mlflow/projects/DataFunctions/ElasticFunctions.py", #"/data/home/admin01/notebooks/ADB-CognitiveSearch-ML/pipeline/functions/credentials:/mlflow/projects/credentials"]
+#  environment: ["MLFLOW_TRACKING_URI", "AZURE_STORAGE_ACCESS_KEY"]
+#  run_params: [['--gpus', 'all']]
+
+entry_points:
+  main:
+    parameters:
+      mode: str
+      credentials: str
+      model_file: {type: str, default: ""}
+      deployment_env: {type: str, default: "development"}
+      run_id: {type: str, default: ""}
+      update_sentences: {type: bool, default: False}
+    command: |
+      python main.py \
+      	--mode {mode} \
+        --credentials {credentials} \
+        --deployment_env {deployment_env} \
+        --run_id {run_id} \
+        --update_sentences {update_sentences}
+

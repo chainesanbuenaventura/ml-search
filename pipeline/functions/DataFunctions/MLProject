@@ -1,0 +1,20 @@
+# dataFunctions
+
+name: dataFunctions
+
+conda_env: "../../condaEnvs/dataFunctions.yml"
+
+entry_points:
+  main:
+    parameters:
+      environment: {type: string, default: "development"}
+      mode: {type: string}
+      module: {type: string}
+      run_id: {type: string}
+      index_name: {type: string}
+    command: "python main.py
+                --environment {environment}
+                --mode {mode}
+                --module {module}
+                --run_id {run_id}
+                --index_name {index_name}"
