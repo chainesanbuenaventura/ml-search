@@ -1,0 +1,73 @@
+# temporary folder for data
+data/*
+!data/PCRs
+!data/.gitkeep 
+docs
+Dockerfile
+pipeline/functions
+README.md
+
+# temporary folder for document extraction
+data/PCRs/*
+!data/PCRs/.gitkeep 
+
+# lesson classification
+pipeline/functions/lesson-classification/models/*
+!pipeline/functions/lesson-classification/models/.gitkeep
+!pipeline/functions/lesson-classification/models/language_model.pth
+!pipeline/functions/lesson-classification/models/tmp.pth
+pipeline/functions/lesson-classification/artifacts/*
+!pipeline/functions/lesson-classification/artifacts/.gitkeep
+pipeline/functions/lesson-classification/azure/*
+!pipeline/functions/lesson-classification/azure/.gitkeep
+pipeline/functions/lesson-classification/myenv/*
+!pipeline/functions/lesson-classification/myenv/.gitkeep
+pipeline/functions/lesson-classification/*.ipynb
+
+# temporary folder for models
+models/*
+!models/.gitkeep
+
+mlruns/
+backend-store/
+
+# Python temporary files
+__pycache__/
+*.py[co]
+.ipynb_checkpoints/
+
+# airflow
+airflow/
+
+# Mac
+.DS_Store
+._*
+
+# large files
+bertsumextabs_cnndm_final_model.zip
+model_step_148000.pt
+
+# lesson summarization
+pipeline/functions/lesson-summarization/temp/*
+!pipeline/functions/lesson-summarization/temp/.gitkeep
+pipeline/functions/lesson-summarization/results/*
+!pipeline/functions/lesson-summarization/results/.gitkeep
+pipeline/functions/lesson-summarization/models/*
+pipeline/functions/lesson-summarization/models/bertextabs.pt
+!pipeline/functions/lesson-summarization/models/.gitkeep
+pipeline/functions/lesson-summarization/logs/*
+!pipeline/functions/lesson-summarization/logs/.gitkeep
+pipeline/functions/lesson-summarization/json_data/*
+!pipeline/functions/lesson-summarization/json_data/.gitkeep
+pipeline/functions/lesson-summarization/bert_data/*
+!pipeline/functions/lesson-summarization/bert_data/.gitkeep
+pipeline/functions/lesson-summarization/merged_stories_tokenized/*
+!pipeline/functions/lesson-summarization/merged_stories_tokenized/.gitkeep
+!pipeline/functions/lesson-summarization/src/models/
+
+pipeline/functions/lesson-summarization/stanford-corenlp-full-2018-10-05/*
+!pipeline/functions/lesson-summarization/stanford-corenlp-full-2018-10-05/.gitkeep
+
+pipeline/functions/lesson-summarization/stanford-corenlp-full-2018-10-05.zip
+pipeline/functions/lesson-summarization/eva_forecast_06_08_2020.csv
+pipeline/functions/lesson-summarization/ulm_forecasts.csv
